@@ -1,12 +1,13 @@
+import 'package:anthortest/app/models/movie_model.dart';
 import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:flutter/material.dart';
 
 import 'movie_widget.dart';
 
-class MoviesWidget extends StatelessWidget {
-  final List<MovieData> movies;
-  MoviesWidget({this.movies});
+class OmdbMoviesWidget extends StatelessWidget {
+  final List<MovieModel> movies;
+  OmdbMoviesWidget({this.movies});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +17,20 @@ class MoviesWidget extends StatelessWidget {
       itemBuilder: (_, index) {
         final movie = movies[index];
         return MovieWidget(
-          image: movie?.image,
+          image: movie?.poster,
           title: movie?.title,
           year: movie?.year,
           onTap: () {
             Navigator.pushNamed(
               context,
-              "/home/edit-movie",
-              arguments: movie,
+              "/home/create-movie",
+              arguments: MovieData(
+                id: null,
+                image: movie.poster,
+                year: movie.year,
+                title: movie.title,
+                userId: 1,
+              ),
             );
           },
         );

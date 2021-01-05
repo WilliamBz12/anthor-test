@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'movies_cubit.dart';
+part of 'omdb_movies_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,29 +10,29 @@ part of 'movies_cubit.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$MoviesStateTearOff {
-  const _$MoviesStateTearOff();
+class _$OmdbMoviesStateTearOff {
+  const _$OmdbMoviesStateTearOff();
 
 // ignore: unused_element
-  MoviesInitial loadInitial() {
-    return const MoviesInitial();
+  OmdbMoviesInitial loadInitial() {
+    return const OmdbMoviesInitial();
   }
 
 // ignore: unused_element
-  MoviesLoading loadLoading() {
-    return const MoviesLoading();
+  OmdbMoviesLoading loadLoading() {
+    return const OmdbMoviesLoading();
   }
 
 // ignore: unused_element
-  MoviesLoaded loadLoaded(List<MovieData> data) {
+  MoviesLoaded loadLoaded(List<MovieModel> data) {
     return MoviesLoaded(
       data,
     );
   }
 
 // ignore: unused_element
-  MoviesFailure loadFailure(String message) {
-    return MoviesFailure(
+  OmdbMoviesFailure loadFailure(String message) {
+    return OmdbMoviesFailure(
       message,
     );
   }
@@ -40,88 +40,90 @@ class _$MoviesStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $MoviesState = _$MoviesStateTearOff();
+const $OmdbMoviesState = _$OmdbMoviesStateTearOff();
 
 /// @nodoc
-mixin _$MoviesState {
+mixin _$OmdbMoviesState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult loadInitial(),
     @required TResult loadLoading(),
-    @required TResult loadLoaded(List<MovieData> data),
+    @required TResult loadLoaded(List<MovieModel> data),
     @required TResult loadFailure(String message),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
-    TResult loadLoaded(List<MovieData> data),
+    TResult loadLoaded(List<MovieModel> data),
     TResult loadFailure(String message),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult loadInitial(MoviesInitial value),
-    @required TResult loadLoading(MoviesLoading value),
+    @required TResult loadInitial(OmdbMoviesInitial value),
+    @required TResult loadLoading(OmdbMoviesLoading value),
     @required TResult loadLoaded(MoviesLoaded value),
-    @required TResult loadFailure(MoviesFailure value),
+    @required TResult loadFailure(OmdbMoviesFailure value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult loadInitial(MoviesInitial value),
-    TResult loadLoading(MoviesLoading value),
+    TResult loadInitial(OmdbMoviesInitial value),
+    TResult loadLoading(OmdbMoviesLoading value),
     TResult loadLoaded(MoviesLoaded value),
-    TResult loadFailure(MoviesFailure value),
+    TResult loadFailure(OmdbMoviesFailure value),
     @required TResult orElse(),
   });
 }
 
 /// @nodoc
-abstract class $MoviesStateCopyWith<$Res> {
-  factory $MoviesStateCopyWith(
-          MoviesState value, $Res Function(MoviesState) then) =
-      _$MoviesStateCopyWithImpl<$Res>;
+abstract class $OmdbMoviesStateCopyWith<$Res> {
+  factory $OmdbMoviesStateCopyWith(
+          OmdbMoviesState value, $Res Function(OmdbMoviesState) then) =
+      _$OmdbMoviesStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$MoviesStateCopyWithImpl<$Res> implements $MoviesStateCopyWith<$Res> {
-  _$MoviesStateCopyWithImpl(this._value, this._then);
+class _$OmdbMoviesStateCopyWithImpl<$Res>
+    implements $OmdbMoviesStateCopyWith<$Res> {
+  _$OmdbMoviesStateCopyWithImpl(this._value, this._then);
 
-  final MoviesState _value;
+  final OmdbMoviesState _value;
   // ignore: unused_field
-  final $Res Function(MoviesState) _then;
+  final $Res Function(OmdbMoviesState) _then;
 }
 
 /// @nodoc
-abstract class $MoviesInitialCopyWith<$Res> {
-  factory $MoviesInitialCopyWith(
-          MoviesInitial value, $Res Function(MoviesInitial) then) =
-      _$MoviesInitialCopyWithImpl<$Res>;
+abstract class $OmdbMoviesInitialCopyWith<$Res> {
+  factory $OmdbMoviesInitialCopyWith(
+          OmdbMoviesInitial value, $Res Function(OmdbMoviesInitial) then) =
+      _$OmdbMoviesInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$MoviesInitialCopyWithImpl<$Res> extends _$MoviesStateCopyWithImpl<$Res>
-    implements $MoviesInitialCopyWith<$Res> {
-  _$MoviesInitialCopyWithImpl(
-      MoviesInitial _value, $Res Function(MoviesInitial) _then)
-      : super(_value, (v) => _then(v as MoviesInitial));
+class _$OmdbMoviesInitialCopyWithImpl<$Res>
+    extends _$OmdbMoviesStateCopyWithImpl<$Res>
+    implements $OmdbMoviesInitialCopyWith<$Res> {
+  _$OmdbMoviesInitialCopyWithImpl(
+      OmdbMoviesInitial _value, $Res Function(OmdbMoviesInitial) _then)
+      : super(_value, (v) => _then(v as OmdbMoviesInitial));
 
   @override
-  MoviesInitial get _value => super._value as MoviesInitial;
+  OmdbMoviesInitial get _value => super._value as OmdbMoviesInitial;
 }
 
 /// @nodoc
-class _$MoviesInitial implements MoviesInitial {
-  const _$MoviesInitial();
+class _$OmdbMoviesInitial implements OmdbMoviesInitial {
+  const _$OmdbMoviesInitial();
 
   @override
   String toString() {
-    return 'MoviesState.loadInitial()';
+    return 'OmdbMoviesState.loadInitial()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is MoviesInitial);
+    return identical(this, other) || (other is OmdbMoviesInitial);
   }
 
   @override
@@ -132,7 +134,7 @@ class _$MoviesInitial implements MoviesInitial {
   TResult when<TResult extends Object>({
     @required TResult loadInitial(),
     @required TResult loadLoading(),
-    @required TResult loadLoaded(List<MovieData> data),
+    @required TResult loadLoaded(List<MovieModel> data),
     @required TResult loadFailure(String message),
   }) {
     assert(loadInitial != null);
@@ -147,7 +149,7 @@ class _$MoviesInitial implements MoviesInitial {
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
-    TResult loadLoaded(List<MovieData> data),
+    TResult loadLoaded(List<MovieModel> data),
     TResult loadFailure(String message),
     @required TResult orElse(),
   }) {
@@ -161,10 +163,10 @@ class _$MoviesInitial implements MoviesInitial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult loadInitial(MoviesInitial value),
-    @required TResult loadLoading(MoviesLoading value),
+    @required TResult loadInitial(OmdbMoviesInitial value),
+    @required TResult loadLoading(OmdbMoviesLoading value),
     @required TResult loadLoaded(MoviesLoaded value),
-    @required TResult loadFailure(MoviesFailure value),
+    @required TResult loadFailure(OmdbMoviesFailure value),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -176,10 +178,10 @@ class _$MoviesInitial implements MoviesInitial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult loadInitial(MoviesInitial value),
-    TResult loadLoading(MoviesLoading value),
+    TResult loadInitial(OmdbMoviesInitial value),
+    TResult loadLoading(OmdbMoviesLoading value),
     TResult loadLoaded(MoviesLoaded value),
-    TResult loadFailure(MoviesFailure value),
+    TResult loadFailure(OmdbMoviesFailure value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -190,40 +192,41 @@ class _$MoviesInitial implements MoviesInitial {
   }
 }
 
-abstract class MoviesInitial implements MoviesState {
-  const factory MoviesInitial() = _$MoviesInitial;
+abstract class OmdbMoviesInitial implements OmdbMoviesState {
+  const factory OmdbMoviesInitial() = _$OmdbMoviesInitial;
 }
 
 /// @nodoc
-abstract class $MoviesLoadingCopyWith<$Res> {
-  factory $MoviesLoadingCopyWith(
-          MoviesLoading value, $Res Function(MoviesLoading) then) =
-      _$MoviesLoadingCopyWithImpl<$Res>;
+abstract class $OmdbMoviesLoadingCopyWith<$Res> {
+  factory $OmdbMoviesLoadingCopyWith(
+          OmdbMoviesLoading value, $Res Function(OmdbMoviesLoading) then) =
+      _$OmdbMoviesLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$MoviesLoadingCopyWithImpl<$Res> extends _$MoviesStateCopyWithImpl<$Res>
-    implements $MoviesLoadingCopyWith<$Res> {
-  _$MoviesLoadingCopyWithImpl(
-      MoviesLoading _value, $Res Function(MoviesLoading) _then)
-      : super(_value, (v) => _then(v as MoviesLoading));
+class _$OmdbMoviesLoadingCopyWithImpl<$Res>
+    extends _$OmdbMoviesStateCopyWithImpl<$Res>
+    implements $OmdbMoviesLoadingCopyWith<$Res> {
+  _$OmdbMoviesLoadingCopyWithImpl(
+      OmdbMoviesLoading _value, $Res Function(OmdbMoviesLoading) _then)
+      : super(_value, (v) => _then(v as OmdbMoviesLoading));
 
   @override
-  MoviesLoading get _value => super._value as MoviesLoading;
+  OmdbMoviesLoading get _value => super._value as OmdbMoviesLoading;
 }
 
 /// @nodoc
-class _$MoviesLoading implements MoviesLoading {
-  const _$MoviesLoading();
+class _$OmdbMoviesLoading implements OmdbMoviesLoading {
+  const _$OmdbMoviesLoading();
 
   @override
   String toString() {
-    return 'MoviesState.loadLoading()';
+    return 'OmdbMoviesState.loadLoading()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is MoviesLoading);
+    return identical(this, other) || (other is OmdbMoviesLoading);
   }
 
   @override
@@ -234,7 +237,7 @@ class _$MoviesLoading implements MoviesLoading {
   TResult when<TResult extends Object>({
     @required TResult loadInitial(),
     @required TResult loadLoading(),
-    @required TResult loadLoaded(List<MovieData> data),
+    @required TResult loadLoaded(List<MovieModel> data),
     @required TResult loadFailure(String message),
   }) {
     assert(loadInitial != null);
@@ -249,7 +252,7 @@ class _$MoviesLoading implements MoviesLoading {
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
-    TResult loadLoaded(List<MovieData> data),
+    TResult loadLoaded(List<MovieModel> data),
     TResult loadFailure(String message),
     @required TResult orElse(),
   }) {
@@ -263,10 +266,10 @@ class _$MoviesLoading implements MoviesLoading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult loadInitial(MoviesInitial value),
-    @required TResult loadLoading(MoviesLoading value),
+    @required TResult loadInitial(OmdbMoviesInitial value),
+    @required TResult loadLoading(OmdbMoviesLoading value),
     @required TResult loadLoaded(MoviesLoaded value),
-    @required TResult loadFailure(MoviesFailure value),
+    @required TResult loadFailure(OmdbMoviesFailure value),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -278,10 +281,10 @@ class _$MoviesLoading implements MoviesLoading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult loadInitial(MoviesInitial value),
-    TResult loadLoading(MoviesLoading value),
+    TResult loadInitial(OmdbMoviesInitial value),
+    TResult loadLoading(OmdbMoviesLoading value),
     TResult loadLoaded(MoviesLoaded value),
-    TResult loadFailure(MoviesFailure value),
+    TResult loadFailure(OmdbMoviesFailure value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -292,8 +295,8 @@ class _$MoviesLoading implements MoviesLoading {
   }
 }
 
-abstract class MoviesLoading implements MoviesState {
-  const factory MoviesLoading() = _$MoviesLoading;
+abstract class OmdbMoviesLoading implements OmdbMoviesState {
+  const factory OmdbMoviesLoading() = _$OmdbMoviesLoading;
 }
 
 /// @nodoc
@@ -301,11 +304,12 @@ abstract class $MoviesLoadedCopyWith<$Res> {
   factory $MoviesLoadedCopyWith(
           MoviesLoaded value, $Res Function(MoviesLoaded) then) =
       _$MoviesLoadedCopyWithImpl<$Res>;
-  $Res call({List<MovieData> data});
+  $Res call({List<MovieModel> data});
 }
 
 /// @nodoc
-class _$MoviesLoadedCopyWithImpl<$Res> extends _$MoviesStateCopyWithImpl<$Res>
+class _$MoviesLoadedCopyWithImpl<$Res>
+    extends _$OmdbMoviesStateCopyWithImpl<$Res>
     implements $MoviesLoadedCopyWith<$Res> {
   _$MoviesLoadedCopyWithImpl(
       MoviesLoaded _value, $Res Function(MoviesLoaded) _then)
@@ -319,7 +323,7 @@ class _$MoviesLoadedCopyWithImpl<$Res> extends _$MoviesStateCopyWithImpl<$Res>
     Object data = freezed,
   }) {
     return _then(MoviesLoaded(
-      data == freezed ? _value.data : data as List<MovieData>,
+      data == freezed ? _value.data : data as List<MovieModel>,
     ));
   }
 }
@@ -329,11 +333,11 @@ class _$MoviesLoaded implements MoviesLoaded {
   const _$MoviesLoaded(this.data) : assert(data != null);
 
   @override
-  final List<MovieData> data;
+  final List<MovieModel> data;
 
   @override
   String toString() {
-    return 'MoviesState.loadLoaded(data: $data)';
+    return 'OmdbMoviesState.loadLoaded(data: $data)';
   }
 
   @override
@@ -357,7 +361,7 @@ class _$MoviesLoaded implements MoviesLoaded {
   TResult when<TResult extends Object>({
     @required TResult loadInitial(),
     @required TResult loadLoading(),
-    @required TResult loadLoaded(List<MovieData> data),
+    @required TResult loadLoaded(List<MovieModel> data),
     @required TResult loadFailure(String message),
   }) {
     assert(loadInitial != null);
@@ -372,7 +376,7 @@ class _$MoviesLoaded implements MoviesLoaded {
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
-    TResult loadLoaded(List<MovieData> data),
+    TResult loadLoaded(List<MovieModel> data),
     TResult loadFailure(String message),
     @required TResult orElse(),
   }) {
@@ -386,10 +390,10 @@ class _$MoviesLoaded implements MoviesLoaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult loadInitial(MoviesInitial value),
-    @required TResult loadLoading(MoviesLoading value),
+    @required TResult loadInitial(OmdbMoviesInitial value),
+    @required TResult loadLoading(OmdbMoviesLoading value),
     @required TResult loadLoaded(MoviesLoaded value),
-    @required TResult loadFailure(MoviesFailure value),
+    @required TResult loadFailure(OmdbMoviesFailure value),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -401,10 +405,10 @@ class _$MoviesLoaded implements MoviesLoaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult loadInitial(MoviesInitial value),
-    TResult loadLoading(MoviesLoading value),
+    TResult loadInitial(OmdbMoviesInitial value),
+    TResult loadLoading(OmdbMoviesLoading value),
     TResult loadLoaded(MoviesLoaded value),
-    TResult loadFailure(MoviesFailure value),
+    TResult loadFailure(OmdbMoviesFailure value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -415,57 +419,58 @@ class _$MoviesLoaded implements MoviesLoaded {
   }
 }
 
-abstract class MoviesLoaded implements MoviesState {
-  const factory MoviesLoaded(List<MovieData> data) = _$MoviesLoaded;
+abstract class MoviesLoaded implements OmdbMoviesState {
+  const factory MoviesLoaded(List<MovieModel> data) = _$MoviesLoaded;
 
-  List<MovieData> get data;
+  List<MovieModel> get data;
   $MoviesLoadedCopyWith<MoviesLoaded> get copyWith;
 }
 
 /// @nodoc
-abstract class $MoviesFailureCopyWith<$Res> {
-  factory $MoviesFailureCopyWith(
-          MoviesFailure value, $Res Function(MoviesFailure) then) =
-      _$MoviesFailureCopyWithImpl<$Res>;
+abstract class $OmdbMoviesFailureCopyWith<$Res> {
+  factory $OmdbMoviesFailureCopyWith(
+          OmdbMoviesFailure value, $Res Function(OmdbMoviesFailure) then) =
+      _$OmdbMoviesFailureCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$MoviesFailureCopyWithImpl<$Res> extends _$MoviesStateCopyWithImpl<$Res>
-    implements $MoviesFailureCopyWith<$Res> {
-  _$MoviesFailureCopyWithImpl(
-      MoviesFailure _value, $Res Function(MoviesFailure) _then)
-      : super(_value, (v) => _then(v as MoviesFailure));
+class _$OmdbMoviesFailureCopyWithImpl<$Res>
+    extends _$OmdbMoviesStateCopyWithImpl<$Res>
+    implements $OmdbMoviesFailureCopyWith<$Res> {
+  _$OmdbMoviesFailureCopyWithImpl(
+      OmdbMoviesFailure _value, $Res Function(OmdbMoviesFailure) _then)
+      : super(_value, (v) => _then(v as OmdbMoviesFailure));
 
   @override
-  MoviesFailure get _value => super._value as MoviesFailure;
+  OmdbMoviesFailure get _value => super._value as OmdbMoviesFailure;
 
   @override
   $Res call({
     Object message = freezed,
   }) {
-    return _then(MoviesFailure(
+    return _then(OmdbMoviesFailure(
       message == freezed ? _value.message : message as String,
     ));
   }
 }
 
 /// @nodoc
-class _$MoviesFailure implements MoviesFailure {
-  const _$MoviesFailure(this.message) : assert(message != null);
+class _$OmdbMoviesFailure implements OmdbMoviesFailure {
+  const _$OmdbMoviesFailure(this.message) : assert(message != null);
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'MoviesState.loadFailure(message: $message)';
+    return 'OmdbMoviesState.loadFailure(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is MoviesFailure &&
+        (other is OmdbMoviesFailure &&
             (identical(other.message, message) ||
                 const DeepCollectionEquality().equals(other.message, message)));
   }
@@ -475,15 +480,15 @@ class _$MoviesFailure implements MoviesFailure {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
   @override
-  $MoviesFailureCopyWith<MoviesFailure> get copyWith =>
-      _$MoviesFailureCopyWithImpl<MoviesFailure>(this, _$identity);
+  $OmdbMoviesFailureCopyWith<OmdbMoviesFailure> get copyWith =>
+      _$OmdbMoviesFailureCopyWithImpl<OmdbMoviesFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult loadInitial(),
     @required TResult loadLoading(),
-    @required TResult loadLoaded(List<MovieData> data),
+    @required TResult loadLoaded(List<MovieModel> data),
     @required TResult loadFailure(String message),
   }) {
     assert(loadInitial != null);
@@ -498,7 +503,7 @@ class _$MoviesFailure implements MoviesFailure {
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
-    TResult loadLoaded(List<MovieData> data),
+    TResult loadLoaded(List<MovieModel> data),
     TResult loadFailure(String message),
     @required TResult orElse(),
   }) {
@@ -512,10 +517,10 @@ class _$MoviesFailure implements MoviesFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult loadInitial(MoviesInitial value),
-    @required TResult loadLoading(MoviesLoading value),
+    @required TResult loadInitial(OmdbMoviesInitial value),
+    @required TResult loadLoading(OmdbMoviesLoading value),
     @required TResult loadLoaded(MoviesLoaded value),
-    @required TResult loadFailure(MoviesFailure value),
+    @required TResult loadFailure(OmdbMoviesFailure value),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -527,10 +532,10 @@ class _$MoviesFailure implements MoviesFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult loadInitial(MoviesInitial value),
-    TResult loadLoading(MoviesLoading value),
+    TResult loadInitial(OmdbMoviesInitial value),
+    TResult loadLoading(OmdbMoviesLoading value),
     TResult loadLoaded(MoviesLoaded value),
-    TResult loadFailure(MoviesFailure value),
+    TResult loadFailure(OmdbMoviesFailure value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -541,9 +546,9 @@ class _$MoviesFailure implements MoviesFailure {
   }
 }
 
-abstract class MoviesFailure implements MoviesState {
-  const factory MoviesFailure(String message) = _$MoviesFailure;
+abstract class OmdbMoviesFailure implements OmdbMoviesState {
+  const factory OmdbMoviesFailure(String message) = _$OmdbMoviesFailure;
 
   String get message;
-  $MoviesFailureCopyWith<MoviesFailure> get copyWith;
+  $OmdbMoviesFailureCopyWith<OmdbMoviesFailure> get copyWith;
 }
