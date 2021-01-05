@@ -9,15 +9,14 @@ class CustomTextFieldWidget extends StatefulWidget {
   final TextInputType keyboardType;
   final TextEditingController controller;
   final void Function(String) onChanged;
-
-  final void Function(String) onValidator;
+  final void Function(String) onSubmit;
 
   CustomTextFieldWidget({
     this.hintText,
     this.keyboardType,
     @required this.controller,
     this.onChanged,
-    this.onValidator,
+    this.onSubmit,
   });
 
   @override
@@ -30,11 +29,12 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        TextFormField(
+        TextField(
           keyboardType: widget.keyboardType,
           controller: widget.controller,
+          textInputAction: TextInputAction.search,
+          onSubmitted: widget?.onSubmit,
           onChanged: widget?.onChanged,
-          validator: widget.onValidator,
           decoration: InputDecoration(
             errorBorder: _inputBorder.copyWith(
               borderSide: BorderSide(color: AppColors.danger),

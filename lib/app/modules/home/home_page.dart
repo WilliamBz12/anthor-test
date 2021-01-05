@@ -1,6 +1,5 @@
 import 'package:anthortest/app/shared/style/colors.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
-import 'package:anthortest/app/shared/style/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +21,9 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         backgroundColor: AppColors.primary,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "home/select-movie");
+        },
       ),
       body: Container(
         padding: Dimensions.marginScreen,
