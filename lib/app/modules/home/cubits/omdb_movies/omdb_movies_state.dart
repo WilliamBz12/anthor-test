@@ -6,5 +6,5 @@ abstract class OmdbMoviesState with _$OmdbMoviesState {
   const factory OmdbMoviesState.loadLoading() = OmdbMoviesLoading;
   const factory OmdbMoviesState.loadLoaded(List<MovieModel> data) =
       MoviesLoaded;
-  const factory OmdbMoviesState.loadFailure(String message) = OmdbMoviesFailure;
+  const factory OmdbMoviesState.loadFailure(ApiFailure failure) = OmdbMoviesFailure;
 }

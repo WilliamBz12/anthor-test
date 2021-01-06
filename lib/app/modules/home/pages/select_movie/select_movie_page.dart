@@ -1,5 +1,6 @@
 import 'package:anthortest/app/modules/home/cubits/omdb_movies/omdb_movies_cubit.dart';
 import 'package:anthortest/app/modules/home/widgets/omdb_movies_widget.dart';
+import 'package:anthortest/app/shared/api/api_failure.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
 import 'package:anthortest/app/shared/widgets/custom_text_field_widget.dart';
@@ -62,13 +63,24 @@ class _SelectMoviePageState extends State<SelectMoviePage> {
                 return state.maybeWhen(
                   loadLoading: () => Center(child: CircularProgressIndicator()),
                   loadLoaded: (data) => OmdbMoviesWidget(movies: data),
-                  loadFailure: (message) => Text(message),
+                  loadFailure: (failure) => _buildFailureWidget(failure),
                   orElse: () => Container(),
                 );
               },
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildFailureWidget(ApiFailure failure) {
+    return Center(
+      child: failure.maybeWhen(
+        networkFailure: () => Text("Internet connection problem"),
+        serverFailure: (message) => Text("$message"),
+        notFound: () => Text("Request not found, try again later"),
+        orElse: () => Container(),
       ),
     );
   }

@@ -31,9 +31,9 @@ class _$OmdbMoviesStateTearOff {
   }
 
 // ignore: unused_element
-  OmdbMoviesFailure loadFailure(String message) {
+  OmdbMoviesFailure loadFailure(ApiFailure failure) {
     return OmdbMoviesFailure(
-      message,
+      failure,
     );
   }
 }
@@ -49,14 +49,14 @@ mixin _$OmdbMoviesState {
     @required TResult loadInitial(),
     @required TResult loadLoading(),
     @required TResult loadLoaded(List<MovieModel> data),
-    @required TResult loadFailure(String message),
+    @required TResult loadFailure(ApiFailure failure),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult loadInitial(),
     TResult loadLoading(),
     TResult loadLoaded(List<MovieModel> data),
-    TResult loadFailure(String message),
+    TResult loadFailure(ApiFailure failure),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -135,7 +135,7 @@ class _$OmdbMoviesInitial implements OmdbMoviesInitial {
     @required TResult loadInitial(),
     @required TResult loadLoading(),
     @required TResult loadLoaded(List<MovieModel> data),
-    @required TResult loadFailure(String message),
+    @required TResult loadFailure(ApiFailure failure),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -150,7 +150,7 @@ class _$OmdbMoviesInitial implements OmdbMoviesInitial {
     TResult loadInitial(),
     TResult loadLoading(),
     TResult loadLoaded(List<MovieModel> data),
-    TResult loadFailure(String message),
+    TResult loadFailure(ApiFailure failure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -238,7 +238,7 @@ class _$OmdbMoviesLoading implements OmdbMoviesLoading {
     @required TResult loadInitial(),
     @required TResult loadLoading(),
     @required TResult loadLoaded(List<MovieModel> data),
-    @required TResult loadFailure(String message),
+    @required TResult loadFailure(ApiFailure failure),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -253,7 +253,7 @@ class _$OmdbMoviesLoading implements OmdbMoviesLoading {
     TResult loadInitial(),
     TResult loadLoading(),
     TResult loadLoaded(List<MovieModel> data),
-    TResult loadFailure(String message),
+    TResult loadFailure(ApiFailure failure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -362,7 +362,7 @@ class _$MoviesLoaded implements MoviesLoaded {
     @required TResult loadInitial(),
     @required TResult loadLoading(),
     @required TResult loadLoaded(List<MovieModel> data),
-    @required TResult loadFailure(String message),
+    @required TResult loadFailure(ApiFailure failure),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
@@ -377,7 +377,7 @@ class _$MoviesLoaded implements MoviesLoaded {
     TResult loadInitial(),
     TResult loadLoading(),
     TResult loadLoaded(List<MovieModel> data),
-    TResult loadFailure(String message),
+    TResult loadFailure(ApiFailure failure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -431,7 +431,7 @@ abstract class $OmdbMoviesFailureCopyWith<$Res> {
   factory $OmdbMoviesFailureCopyWith(
           OmdbMoviesFailure value, $Res Function(OmdbMoviesFailure) then) =
       _$OmdbMoviesFailureCopyWithImpl<$Res>;
-  $Res call({String message});
+  $Res call({ApiFailure failure});
 }
 
 /// @nodoc
@@ -447,37 +447,37 @@ class _$OmdbMoviesFailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object failure = freezed,
   }) {
     return _then(OmdbMoviesFailure(
-      message == freezed ? _value.message : message as String,
+      failure == freezed ? _value.failure : failure as ApiFailure,
     ));
   }
 }
 
 /// @nodoc
 class _$OmdbMoviesFailure implements OmdbMoviesFailure {
-  const _$OmdbMoviesFailure(this.message) : assert(message != null);
+  const _$OmdbMoviesFailure(this.failure) : assert(failure != null);
 
   @override
-  final String message;
+  final ApiFailure failure;
 
   @override
   String toString() {
-    return 'OmdbMoviesState.loadFailure(message: $message)';
+    return 'OmdbMoviesState.loadFailure(failure: $failure)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is OmdbMoviesFailure &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+            (identical(other.failure, failure) ||
+                const DeepCollectionEquality().equals(other.failure, failure)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
 
   @override
   $OmdbMoviesFailureCopyWith<OmdbMoviesFailure> get copyWith =>
@@ -489,13 +489,13 @@ class _$OmdbMoviesFailure implements OmdbMoviesFailure {
     @required TResult loadInitial(),
     @required TResult loadLoading(),
     @required TResult loadLoaded(List<MovieModel> data),
-    @required TResult loadFailure(String message),
+    @required TResult loadFailure(ApiFailure failure),
   }) {
     assert(loadInitial != null);
     assert(loadLoading != null);
     assert(loadLoaded != null);
     assert(loadFailure != null);
-    return loadFailure(message);
+    return loadFailure(failure);
   }
 
   @override
@@ -504,12 +504,12 @@ class _$OmdbMoviesFailure implements OmdbMoviesFailure {
     TResult loadInitial(),
     TResult loadLoading(),
     TResult loadLoaded(List<MovieModel> data),
-    TResult loadFailure(String message),
+    TResult loadFailure(ApiFailure failure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadFailure != null) {
-      return loadFailure(message);
+      return loadFailure(failure);
     }
     return orElse();
   }
@@ -547,8 +547,8 @@ class _$OmdbMoviesFailure implements OmdbMoviesFailure {
 }
 
 abstract class OmdbMoviesFailure implements OmdbMoviesState {
-  const factory OmdbMoviesFailure(String message) = _$OmdbMoviesFailure;
+  const factory OmdbMoviesFailure(ApiFailure failure) = _$OmdbMoviesFailure;
 
-  String get message;
+  ApiFailure get failure;
   $OmdbMoviesFailureCopyWith<OmdbMoviesFailure> get copyWith;
 }
