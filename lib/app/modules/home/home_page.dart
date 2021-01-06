@@ -36,7 +36,9 @@ class _HomePageState extends State<HomePage> {
         cubit: _moviesCubit,
         builder: (_, state) {
           return state.maybeWhen(
-            loadLoading: () => CircularProgressIndicator(),
+            loadLoading: () => Center(
+              child: CircularProgressIndicator(),
+            ),
             loadFailure: (message) => Text(message),
             loadLoaded: (data) => MoviesWidget(movies: data),
             orElse: () => Container(),

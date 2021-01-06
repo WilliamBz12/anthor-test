@@ -16,10 +16,10 @@ final exception = Exception('ops');
 final mockOmdbMovies = [
   MovieModel(
     imdbID: "ASFdsaf",
-    poster: "adsfasdfasd",
+    poster: "https://br.web.img3.acsta.net/pictures/20/01/22/18/59/2385080.jpg",
     title: "Batman",
     type: "movie",
-    year: "1919",
+    year: "1999",
   ),
 ];
 

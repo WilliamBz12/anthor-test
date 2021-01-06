@@ -6,7 +6,7 @@ import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-class MockSignInCubit extends MockBloc<UserData> implements SignInCubit {}
+class MockSignInCubit extends MockBloc implements SignInCubit {}
 
 class MockUserRepository extends Mock implements UserRepository {}
 

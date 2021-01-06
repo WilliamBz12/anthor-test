@@ -15,8 +15,10 @@ class AuthenticationModule extends ChildModule {
 
   @override
   List<ModularRouter> get routers => [
-        ModularRouter(Modular.initialRoute,
-            child: (_, args) => AuthenticationPage()),
+        ModularRouter(
+          Modular.initialRoute,
+          child: (_, args) => AuthenticationPage(),
+        ),
       ];
 
   static Inject get to => Inject<AuthenticationModule>.of();

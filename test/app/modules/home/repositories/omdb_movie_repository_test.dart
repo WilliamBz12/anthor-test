@@ -45,14 +45,5 @@ void main() {
         expect(result, equals(Left(ApiFailure.notFound())));
       },
     );
-
-    test(
-      "should return Exception when request is incorrect",
-      () async {
-        when(repository.fetchByText()).thenThrow(Exception());
-        final result = await repository.fetchByText();
-        expect(result, equals(Exception()));
-      },
-    );
   });
 }

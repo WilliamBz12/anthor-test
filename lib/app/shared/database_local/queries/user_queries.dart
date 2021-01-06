@@ -12,7 +12,8 @@ class UserDao extends DatabaseAccessor<DatabaseProvider> with _$UserDaoMixin {
   }
 
   Future<UserData> fetchByNick(String nickname) {
-    return (select(user)..where((t) => t.nickname.equals(nickname))).getSingle();
+    return (select(user)..where((t) => t.nickname.equals(nickname)))
+        .getSingle();
   }
 
   Future<bool> updateUser(UserData entry) {
