@@ -1,5 +1,6 @@
 import 'package:anthortest/app/models/movie_model.dart';
 import 'package:anthortest/app/modules/home/cubits/create_movie/create_movie_cubit.dart';
+import 'package:anthortest/app/modules/home/cubits/edit_movie/edit_movie_cubit.dart';
 import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
@@ -8,17 +9,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class CreateMoviePage extends StatefulWidget {
+class EditMoviePage extends StatefulWidget {
   @override
-  _CreateMoviePageState createState() => _CreateMoviePageState();
+  _EditMoviePageState createState() => _EditMoviePageState();
 }
 
-class _CreateMoviePageState extends State<CreateMoviePage> {
+class _EditMoviePageState extends State<EditMoviePage> {
   final _title$ = TextEditingController();
   final _year$ = TextEditingController();
   final _image$ = TextEditingController();
 
-  final _createMovieCubit = Modular.get<CreateMovieCubit>();
+  final _editMovieCubit = Modular.get<EditMovieCubit>();
 
   @override
   void initState() {
@@ -35,7 +36,7 @@ class _CreateMoviePageState extends State<CreateMoviePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Movie"),
+        title: Text("Edit Movie"),
       ),
       body: Container(
         padding: Dimensions.marginScreen,
@@ -56,20 +57,20 @@ class _CreateMoviePageState extends State<CreateMoviePage> {
               controller: _image$,
             ),
             SizedBox(height: 20),
-            _buildCreateButton(),
+            _buildConfirmButton(),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildCreateButton() {
-    return BlocConsumer<CreateMovieCubit, CreateMovieState>(
-      cubit: _createMovieCubit,
+  Widget _buildConfirmButton() {
+    return BlocConsumer<EditMovieCubit, EditMovieState>(
+      cubit: _editMovieCubit,
       builder: (_, state) {
         return CustomButtonWidget(
           text: "Confirm",
-          isLoading: state == CreateMovieState.loadLoading(),
+          isLoading: state == EditMovieState.loadLoading(),
           onTap: () {
             final movie = MovieData(
               id: null,
@@ -78,7 +79,7 @@ class _CreateMoviePageState extends State<CreateMoviePage> {
               year: _year$.text,
               userId: 1,
             );
-            _createMovieCubit.create(movie);
+            _editMovieCubit.edit(movie);
           },
         );
       },
