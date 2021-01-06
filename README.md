@@ -8,7 +8,7 @@ If I had more time, I would use an architecture more solid, as well as apply tes
 ![](gifs/sign_up.gif)
 
 
-#Technologies
+# Technologies
 - Flutter
 - OMDB API
 - Sqlite as local database
