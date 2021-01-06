@@ -9,7 +9,6 @@ class OmdbRepository {
   Future<Either<String, List<MovieModel>>> searchByText({String text}) async {
     try {
       final result = await client.get("&s=$text");
-
       List<MovieModel> movies = [];
       for (var item in result.data["Search"]) {
         var movie = MovieModel.fromJson(item);

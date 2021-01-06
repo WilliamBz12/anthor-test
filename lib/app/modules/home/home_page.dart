@@ -1,7 +1,6 @@
 import 'package:anthortest/app/modules/home/cubits/movies/movies_cubit.dart';
 import 'package:anthortest/app/modules/home/widgets/movies_widget.dart';
 import 'package:anthortest/app/shared/style/colors.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -17,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _moviesCubit.load(1);
+    _moviesCubit.load();
   }
 
   @override
@@ -25,15 +24,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("My movies"),
-        backgroundColor: AppColors.primary,
-        actions: [
-          // IconButton(
-          //   icon: Icon(
-          //     Icons.subdirectory_arrow_left,
-          //   ),
-          //   onPressed: () {},
-          // ),
-        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -42,19 +32,16 @@ class _HomePageState extends State<HomePage> {
           Navigator.pushNamed(context, "home/select-movie");
         },
       ),
-      body: Container(
-        padding: Dimensions.marginScreen,
-        child: BlocBuilder<MoviesCubit, MoviesState>(
-          cubit: _moviesCubit,
-          builder: (_, state) {
-            return state.maybeWhen(
-              loadLoading: () => CircularProgressIndicator(),
-              loadFailure: (message) => Text(message),
-              loadLoaded: (data) => MoviesWidget(movies: data),
-              orElse: () => Container(),
-            );
-          },
-        ),
+      body: BlocBuilder<MoviesCubit, MoviesState>(
+        cubit: _moviesCubit,
+        builder: (_, state) {
+          return state.maybeWhen(
+            loadLoading: () => CircularProgressIndicator(),
+            loadFailure: (message) => Text(message),
+            loadLoaded: (data) => MoviesWidget(movies: data),
+            orElse: () => Container(),
+          );
+        },
       ),
     );
   }

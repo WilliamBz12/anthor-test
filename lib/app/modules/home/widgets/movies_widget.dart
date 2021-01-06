@@ -10,8 +10,14 @@ class MoviesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (movies.isEmpty)
+      return Center(
+        child: Text(
+          "No movies registred",
+        ),
+      );
     return ListView.builder(
-      padding: Dimensions.marginScreen.copyWith(top: 0),
+      padding: Dimensions.marginScreen,
       itemCount: movies.length,
       itemBuilder: (_, index) {
         final movie = movies[index];

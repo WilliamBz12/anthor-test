@@ -1,6 +1,5 @@
-import 'package:anthortest/app/models/movie_model.dart';
-import 'package:anthortest/app/modules/home/cubits/create_movie/create_movie_cubit.dart';
 import 'package:anthortest/app/modules/home/cubits/edit_movie/edit_movie_cubit.dart';
+import 'package:anthortest/app/modules/home/cubits/movies/movies_cubit.dart';
 import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
@@ -20,12 +19,16 @@ class _EditMoviePageState extends State<EditMoviePage> {
   final _image$ = TextEditingController();
 
   final _editMovieCubit = Modular.get<EditMovieCubit>();
+  final _moviesCubit = Modular.get<MoviesCubit>();
+
+  MovieData _currentMovie;
 
   @override
   void initState() {
     super.initState();
     final MovieData movieArgs = Modular.args.data;
     if (movieArgs != null) {
+      _currentMovie = movieArgs;
       _title$.text = movieArgs.title;
       _year$.text = movieArgs.year;
       _image$.text = movieArgs.image;
@@ -72,14 +75,12 @@ class _EditMoviePageState extends State<EditMoviePage> {
           text: "Confirm",
           isLoading: state == EditMovieState.loadLoading(),
           onTap: () {
-            final movie = MovieData(
-              id: null,
+            final data = _currentMovie.copyWith(
               image: _image$.text,
               title: _title$.text,
               year: _year$.text,
-              userId: 1,
             );
-            _editMovieCubit.edit(movie);
+            _editMovieCubit.edit(data);
           },
         );
       },
@@ -89,6 +90,7 @@ class _EditMoviePageState extends State<EditMoviePage> {
             print(message);
           },
           loadSucess: () {
+            _moviesCubit.load();
             Navigator.popUntil(context, ModalRoute.withName("/home"));
           },
           orElse: () {},

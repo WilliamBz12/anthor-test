@@ -18,13 +18,17 @@ class MovieWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: FlatButton(
+        minWidth: double.infinity,
         onPressed: onTap,
+        height: 150,
         child: Row(
           children: [
             if (image != null)
               Image.network(
                 image,
                 width: 100,
+                height: 150,
+                fit: BoxFit.cover,
               ),
             SizedBox(width: 10),
             Expanded(

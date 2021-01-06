@@ -1,7 +1,6 @@
 import 'package:anthortest/app/modules/authentication/cubits/sign_up/sign_up_cubit.dart';
 import 'package:anthortest/app/shared/style/colors.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
-import 'package:anthortest/app/shared/style/text_styles.dart';
 import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
 import 'package:anthortest/app/shared/widgets/custom_text_field_widget.dart';
 import 'package:flushbar/flushbar.dart';

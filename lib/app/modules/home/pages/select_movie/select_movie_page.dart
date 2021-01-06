@@ -1,7 +1,7 @@
 import 'package:anthortest/app/modules/home/cubits/omdb_movies/omdb_movies_cubit.dart';
 import 'package:anthortest/app/modules/home/widgets/omdb_movies_widget.dart';
-import 'package:anthortest/app/shared/style/colors.dart';
 import 'package:anthortest/app/shared/style/dimensions.dart';
+import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
 import 'package:anthortest/app/shared/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,22 +26,35 @@ class _SelectMoviePageState extends State<SelectMoviePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.primary,
         title: Text("Select a movie"),
       ),
       body: Column(
         children: [
           Padding(
             padding: Dimensions.marginScreen.copyWith(bottom: 10),
-            child: CustomTextFieldWidget(
-              controller: _search$,
-              hintText: "Search, ex: Batman",
-              onSubmit: (value) {
-                _moviesCubit.loadWithText(value);
-              },
+            child: Column(
+              children: [
+                CustomTextFieldWidget(
+                  controller: _search$,
+                  hintText: "Search, ex: Batman",
+                  onSubmit: (value) {
+                    _moviesCubit.loadWithText(value);
+                  },
+                ),
+                SizedBox(height: 10),
+                CustomButtonWidget(
+                  text: "Add without model",
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      "/home/create-movie",
+                    );
+                  },
+                ),
+                SizedBox(height: 10),
+              ],
             ),
           ),
-          SizedBox(height: 10),
           Expanded(
             child: BlocBuilder<OmdbMoviesCubit, OmdbMoviesState>(
               cubit: _moviesCubit,

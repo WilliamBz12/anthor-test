@@ -10,10 +10,18 @@ class CreateMovieCubit extends Cubit<CreateMovieState> {
   final MovieRepository _repository;
   CreateMovieCubit(this._repository) : super(CreateMovieState.loadInitial());
 
-  void create(MovieData movie) async {
+  void create({
+    String image,
+    String title,
+    String year,
+  }) async {
     emit(CreateMovieState.loadLoading());
 
-    final result = await _repository.create(movie: movie);
+    final result = await _repository.create(
+      image: image,
+      title: title,
+      year: year,
+    );
     result.fold(
       (error) => emit(CreateMovieState.loadFailure(error)),
       (data) => emit(CreateMovieState.loadSucess()),
