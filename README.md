@@ -7,8 +7,6 @@ If I had more time, I would use an architecture more solid, as well as apply tes
 
 ![](gifs/sign_up.gif)
 
-![](gifs/sign_in.gif)
-
 
 #Technologies
 - Flutter
@@ -17,7 +15,7 @@ If I had more time, I would use an architecture more solid, as well as apply tes
 
 ## Start
 
-To run the application:
+To clone the application:
 ``` bash
 git clone https://github.com/WilliamBz12/anthor-test
 cd anthor-test
@@ -39,7 +37,7 @@ Tests were build for cubits and repositories, there were several situations that
 
 In the arquitecture was used Flutter Modular and to state management Cubit (flutter_bloc).
 
-####Features
+#### Features
 - Sign In
 - Sign Up
 - Local Database (sqlite)
@@ -50,7 +48,7 @@ In the arquitecture was used Flutter Modular and to state management Cubit (flut
 - Movies Model
 - Unit tests
 
-####Arquitecture
+#### Arquitecture
 ```
 modules/
 |-home
