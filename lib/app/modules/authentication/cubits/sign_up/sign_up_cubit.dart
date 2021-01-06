@@ -1,8 +1,7 @@
-import 'package:anthortest/app/modules/authentication/repositories/user_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import '../../repositories/user_repository.dart';
 
 part 'sign_up_cubit.freezed.dart';
 part 'sign_up_state.dart';
@@ -19,7 +18,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     result.fold(
       (message) => emit(SignUpState.loadFailure(message)),
       (data) async {
-        SharedPreferences prefs = await SharedPreferences.getInstance();
+        var prefs = await SharedPreferences.getInstance();
         await prefs.setInt("user_id", data);
         emit(SignUpState.loadLoaded(data));
       },

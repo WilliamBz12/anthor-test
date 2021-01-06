@@ -1,9 +1,9 @@
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:dartz/dartz.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../../shared/database_local/database_provider.dart';
 
 class MovieRepository {
-  DatabaseProvider _databaseProvider;
+  final DatabaseProvider _databaseProvider;
   MovieRepository(this._databaseProvider);
 
   Future<Either<String, int>> create({
@@ -12,7 +12,7 @@ class MovieRepository {
     String year,
   }) async {
     try {
-      int userId = await _getUserId();
+      var userId = await _getUserId();
       final movie = new MovieData(
         id: null,
         image: image,
@@ -38,7 +38,7 @@ class MovieRepository {
 
   Future<Either<String, List<MovieData>>> fetchByUserId() async {
     try {
-      int userId = await _getUserId();
+      var userId = await _getUserId();
       final result = await _databaseProvider.movieDao.fetchByUserId(userId);
       if (result == null) return Left("User not found");
       return Right(result);

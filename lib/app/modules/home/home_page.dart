@@ -1,9 +1,9 @@
-import 'package:anthortest/app/modules/home/cubits/movies/movies_cubit.dart';
-import 'package:anthortest/app/modules/home/widgets/movies_widget.dart';
-import 'package:anthortest/app/shared/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../shared/style/colors.dart';
+import 'cubits/movies/movies_cubit.dart';
+import 'widgets/movies_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override

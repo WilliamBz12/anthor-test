@@ -1,6 +1,6 @@
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:flutter/material.dart';
+import '../../../shared/database_local/database_provider.dart';
+import '../../../shared/style/dimensions.dart';
 
 import 'movie_widget.dart';
 
@@ -10,12 +10,13 @@ class MoviesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (movies.isEmpty)
+    if (movies.isEmpty) {
       return Center(
         child: Text(
           "No movies registred",
         ),
       );
+    }
     return ListView.builder(
       padding: Dimensions.marginScreen,
       itemCount: movies.length,

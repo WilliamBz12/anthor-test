@@ -432,6 +432,8 @@ abstract class $OmdbMoviesFailureCopyWith<$Res> {
           OmdbMoviesFailure value, $Res Function(OmdbMoviesFailure) then) =
       _$OmdbMoviesFailureCopyWithImpl<$Res>;
   $Res call({ApiFailure failure});
+
+  $ApiFailureCopyWith<$Res> get failure;
 }
 
 /// @nodoc
@@ -452,6 +454,16 @@ class _$OmdbMoviesFailureCopyWithImpl<$Res>
     return _then(OmdbMoviesFailure(
       failure == freezed ? _value.failure : failure as ApiFailure,
     ));
+  }
+
+  @override
+  $ApiFailureCopyWith<$Res> get failure {
+    if (_value.failure == null) {
+      return null;
+    }
+    return $ApiFailureCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
   }
 }
 

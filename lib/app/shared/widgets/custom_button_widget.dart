@@ -1,6 +1,6 @@
-import 'package:anthortest/app/shared/style/colors.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:flutter/material.dart';
+import '../style/colors.dart';
+import '../style/dimensions.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   final String text;

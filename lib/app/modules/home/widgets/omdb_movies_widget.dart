@@ -1,7 +1,7 @@
-import 'package:anthortest/app/models/movie_model.dart';
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
 import 'package:flutter/material.dart';
+import '../../../models/movie_model.dart';
+import '../../../shared/database_local/database_provider.dart';
+import '../../../shared/style/dimensions.dart';
 
 import 'movie_widget.dart';
 

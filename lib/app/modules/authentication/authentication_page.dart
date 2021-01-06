@@ -1,15 +1,14 @@
-import 'package:anthortest/app/modules/authentication/cubits/sign_up/sign_up_cubit.dart';
-import 'package:anthortest/app/shared/style/colors.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
-import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
-import 'package:anthortest/app/shared/widgets/custom_text_field_widget.dart';
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../shared/style/colors.dart';
+import '../../shared/style/dimensions.dart';
+import '../../shared/style/text_styles.dart';
+import '../../shared/widgets/custom_button_widget.dart';
+import '../../shared/widgets/custom_text_field_widget.dart';
 import 'cubits/sign_in/sign_in_cubit.dart';
-import 'widgets/auth_head_widget.dart';
+import 'cubits/sign_up/sign_up_cubit.dart';
 
 class AuthenticationPage extends StatelessWidget {
   final _nickname$ = TextEditingController();
@@ -28,7 +27,13 @@ class AuthenticationPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            AuthHeadWidget(),
+            Text(
+              "Enter your name\nto continue",
+              style: AppTextStyles.primaryH1Bold.copyWith(
+                fontSize: 30,
+                color: Colors.white,
+              ),
+            ),
             SizedBox(height: 30),
             CustomTextFieldWidget(
               controller: _nickname$,

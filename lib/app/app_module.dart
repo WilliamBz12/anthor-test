@@ -1,10 +1,10 @@
-import 'package:anthortest/app/modules/authentication/authentication_module.dart';
-import 'package:anthortest/app/shared/api/api_client_factory.dart';
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
-import 'package:anthortest/app/app_widget.dart';
-import 'package:anthortest/app/modules/home/home_module.dart';
+import 'app_widget.dart';
+import 'modules/authentication/authentication_module.dart';
+import 'modules/home/home_module.dart';
+import 'shared/api/api_client_factory.dart';
+import 'shared/database_local/database_provider.dart';
 
 class AppModule extends MainModule {
   @override

@@ -1,8 +1,8 @@
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
 import 'package:dartz/dartz.dart';
+import '../../../shared/database_local/database_provider.dart';
 
 class UserRepository {
-  DatabaseProvider _databaseProvider;
+  final DatabaseProvider _databaseProvider;
   UserRepository(this._databaseProvider);
 
   Future<Either<String, int>> register({String nickname}) async {

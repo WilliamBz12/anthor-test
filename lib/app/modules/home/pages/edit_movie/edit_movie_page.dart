@@ -1,12 +1,13 @@
-import 'package:anthortest/app/modules/home/cubits/edit_movie/edit_movie_cubit.dart';
-import 'package:anthortest/app/modules/home/cubits/movies/movies_cubit.dart';
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
-import 'package:anthortest/app/shared/style/dimensions.dart';
-import 'package:anthortest/app/shared/widgets/custom_button_widget.dart';
-import 'package:anthortest/app/shared/widgets/custom_text_field_widget.dart';
+import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../../../shared/database_local/database_provider.dart';
+import '../../../../shared/style/dimensions.dart';
+import '../../../../shared/widgets/custom_button_widget.dart';
+import '../../../../shared/widgets/custom_text_field_widget.dart';
+import '../../cubits/edit_movie/edit_movie_cubit.dart';
+import '../../cubits/movies/movies_cubit.dart';
 
 class EditMoviePage extends StatefulWidget {
   @override
@@ -87,7 +88,11 @@ class _EditMoviePageState extends State<EditMoviePage> {
       listener: (_, state) {
         state.maybeWhen(
           loadFailure: (message) {
-            print(message);
+            Flushbar(
+              duration: Duration(seconds: 2),
+              animationDuration: Duration(seconds: 2),
+              message: message,
+            ).show(context);
           },
           loadSucess: () {
             _moviesCubit.load();

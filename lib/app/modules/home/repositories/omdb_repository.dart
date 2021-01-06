@@ -1,19 +1,19 @@
-import 'package:anthortest/app/models/movie_model.dart';
-import 'package:anthortest/app/shared/api/api_failure.dart';
-import 'package:anthortest/app/shared/api/default_handle_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import '../../../models/movie_model.dart';
+import '../../../shared/api/api_failure.dart';
+import '../../../shared/api/default_handle_failure.dart';
 
 class OmdbRepository {
   final Dio client;
   OmdbRepository(this.client);
 
-  Future<Either<ApiFailure, List<MovieModel>>> searchByText({
+  Future<Either<ApiFailure, List<MovieModel>>> fetchByText({
     String text,
   }) async {
     try {
       final result = await client.get("&s=$text");
-      List<MovieModel> movies = [];
+      var movies = <MovieModel>[];
       for (var item in result.data["Search"]) {
         var movie = MovieModel.fromJson(item);
         movies.add(movie);

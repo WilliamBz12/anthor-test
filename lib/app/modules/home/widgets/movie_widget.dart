@@ -1,5 +1,5 @@
-import 'package:anthortest/app/shared/style/text_styles.dart';
 import 'package:flutter/material.dart';
+import '../../../shared/style/text_styles.dart';
 
 class MovieWidget extends StatelessWidget {
   final String title;
