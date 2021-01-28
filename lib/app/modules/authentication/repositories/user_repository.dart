@@ -1,5 +1,5 @@
+import 'package:anthortest/app/core/database_local/database_provider.dart';
 import 'package:dartz/dartz.dart';
-import '../../../shared/database_local/database_provider.dart';
 
 class UserRepository {
   final DatabaseProvider _databaseProvider;

@@ -1,6 +1,6 @@
-import 'package:anthortest/app/models/movie_model.dart';
+import 'package:anthortest/app/core/api/api_failure.dart';
+import 'package:anthortest/app/modules/home/models/movie_model.dart';
 import 'package:anthortest/app/modules/home/repositories/omdb_repository.dart';
-import 'package:anthortest/app/shared/api/api_failure.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

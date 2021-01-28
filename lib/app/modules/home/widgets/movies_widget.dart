@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../shared/database_local/database_provider.dart';
+import '../../../core/database_local/database_provider.dart';
 import '../../../shared/style/dimensions.dart';
 
 import 'movie_widget.dart';

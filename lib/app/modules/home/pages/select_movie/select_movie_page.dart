@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../../shared/api/api_failure.dart';
+import '../../../../core/api/api_failure.dart';
 import '../../../../shared/style/dimensions.dart';
 import '../../../../shared/widgets/custom_button_widget.dart';
 import '../../../../shared/widgets/custom_text_field_widget.dart';

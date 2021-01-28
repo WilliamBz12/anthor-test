@@ -1,6 +1,6 @@
 import 'package:anthortest/app/modules/authentication/cubits/sign_in/sign_in_cubit.dart';
 import 'package:anthortest/app/modules/authentication/repositories/user_repository.dart';
-import 'package:anthortest/app/shared/database_local/database_provider.dart';
+import 'package:anthortest/app/core/database_local/database_provider.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';

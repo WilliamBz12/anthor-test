@@ -1,6 +1,6 @@
+import 'package:anthortest/app/core/database_local/database_provider.dart';
 import 'package:dartz/dartz.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../shared/database_local/database_provider.dart';
 
 class MovieRepository {
   final DatabaseProvider _databaseProvider;

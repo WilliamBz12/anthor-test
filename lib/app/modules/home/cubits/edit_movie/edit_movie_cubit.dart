@@ -1,6 +1,6 @@
+import 'package:anthortest/app/core/database_local/database_provider.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import '../../../../shared/database_local/database_provider.dart';
 import '../../repositories/movie_repository.dart';
 
 part 'edit_movie_cubit.freezed.dart';

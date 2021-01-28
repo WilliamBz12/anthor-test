@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../models/movie_model.dart';
-import '../../../shared/database_local/database_provider.dart';
+import '../../../core/database_local/database_provider.dart';
 import '../../../shared/style/dimensions.dart';
+import '../models/movie_model.dart';
 
 import 'movie_widget.dart';
 

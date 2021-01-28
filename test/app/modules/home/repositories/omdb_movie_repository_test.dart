@@ -1,6 +1,6 @@
-import 'package:anthortest/app/models/movie_model.dart';
+import 'package:anthortest/app/modules/home/models/movie_model.dart';
 import 'package:anthortest/app/modules/home/repositories/omdb_repository.dart';
-import 'package:anthortest/app/shared/api/api_failure.dart';
+import 'package:anthortest/app/core/api/api_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';

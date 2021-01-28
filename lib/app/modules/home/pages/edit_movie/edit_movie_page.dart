@@ -2,7 +2,7 @@ import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../../shared/database_local/database_provider.dart';
+import '../../../../core/database_local/database_provider.dart';
 import '../../../../shared/style/dimensions.dart';
 import '../../../../shared/widgets/custom_button_widget.dart';
 import '../../../../shared/widgets/custom_text_field_widget.dart';

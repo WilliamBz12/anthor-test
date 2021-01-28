@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import '../../../models/movie_model.dart';
-import '../../../shared/api/api_failure.dart';
-import '../../../shared/api/default_handle_failure.dart';
+import '../../../core/api/api_failure.dart';
+import '../../../core/api/default_handle_failure.dart';
+import '../models/movie_model.dart';
 
 class OmdbRepository {
   final Dio client;

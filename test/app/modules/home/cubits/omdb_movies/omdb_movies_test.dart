@@ -1,7 +1,7 @@
-import 'package:anthortest/app/models/movie_model.dart';
 import 'package:anthortest/app/modules/home/cubits/omdb_movies/omdb_movies_cubit.dart';
+import 'package:anthortest/app/modules/home/models/movie_model.dart';
 import 'package:anthortest/app/modules/home/repositories/omdb_repository.dart';
-import 'package:anthortest/app/shared/api/api_failure.dart';
+import 'package:anthortest/app/core/api/api_failure.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
