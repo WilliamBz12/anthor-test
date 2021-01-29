@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../../core/api/api_failure.dart';
-import '../../../../shared/style/dimensions.dart';
-import '../../../../shared/widgets/custom_button_widget.dart';
-import '../../../../shared/widgets/custom_text_field_widget.dart';
-import '../../cubits/omdb_movies/omdb_movies_cubit.dart';
-import '../../widgets/omdb_movies_widget.dart';
+import '../../../../../core/api/api_failure.dart';
+import '../../../../../shared/style/dimensions.dart';
+import '../../../../../shared/widgets/custom_button_widget.dart';
+import '../../../../../shared/widgets/custom_text_field_widget.dart';
+import '../../../widgets/omdb_movies_widget.dart';
+import '../cubits/omdb_movies/omdb_movies_cubit.dart';
 
 class SelectMoviePage extends StatefulWidget {
   @override

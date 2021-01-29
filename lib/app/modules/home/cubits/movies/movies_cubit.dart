@@ -12,7 +12,7 @@ class MoviesCubit extends Cubit<MoviesState> {
 
   void load() async {
     emit(MoviesState.loadLoading());
-    final result = await _repository.fetchByUserId();
+    final result = await _repository.fetchByUser();
     result.fold(
       (message) => emit(MoviesState.loadFailure(message)),
       (data) {

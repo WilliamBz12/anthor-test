@@ -1,6 +1,6 @@
+import 'package:anthortest/app/modules/home/repositories/movie_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../repositories/movie_repository.dart';
 
 part 'create_movie_cubit.freezed.dart';
 part 'create_movie_state.dart';

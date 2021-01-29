@@ -36,7 +36,7 @@ class MovieRepository {
     }
   }
 
-  Future<Either<String, List<MovieData>>> fetchByUserId() async {
+  Future<Either<String, List<MovieData>>> fetchByUser() async {
     try {
       var userId = await _getUserId();
       final result = await _databaseProvider.movieDao.fetchByUserId(userId);
