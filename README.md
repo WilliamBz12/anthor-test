@@ -17,8 +17,8 @@ If I had more time, I would use an architecture more solid, as well as apply tes
 
 To clone the application:
 ``` bash
-git clone https://github.com/WilliamBz12/anthor-test
-cd anthor-test
+git clone https://github.com/WilliamBz12/movies-flutter
+cd movies-flutter
 ```
 
 ## Install dependencies
